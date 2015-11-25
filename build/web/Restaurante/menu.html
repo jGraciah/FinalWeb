@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>ULSA Restaurant</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap.min.css" rel="stylesheet" />
+    <!-- NAVBAR
+    ================================================== -->
+    <style>
+        /* use navbar-wrapper to wrap navigation bar, the purpose is to overlay navigation bar above slider */
+        .navbar-wrapper {
+            position: absolute;
+            top: 20px;
+            left: 0;
+            width: 100%;
+            height: 60px;
+        }
+        .navbar-wrapper > .container {
+            padding: 0;
+        }
+
+        @media all and (max-width: 768px ){
+            .navbar-wrapper {
+                position: relative;
+                top: 0px;
+            }
+        }
+
+    </style>
+    <script>
+        function verDesayuno () {
+            document.getElementById("menu").style.visibility="hidden";
+            document.getElementById("Desayuno").style.visibility="visible";
+            document.getElementById("Comida").style.visibility="hidden";
+        }
+        function verComida () {
+            document.getElementById("menu").style.visibility="hidden";
+            document.getElementById("Desayuno").style.visibility="hidden";
+            document.getElementById("Comida").style.visibility="visible";
+        }
+        </script>
+</head>
+
+
+<body style="overflow: hidden;">
+
+
+    <div class="navbar-wrapper">
+        <div class="container">
+
+            <nav class="navbar navbar-inverse navbar-static-top" role="navigation" style="margin-bottom: 0px;">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="http://localhost:8080/ProyectoWEBFinal/Restaurante/index.html">ULSA Restaurant</a>
+                    </div>
+                    <div id="navbar" class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav">
+                            <li><a href="http://localhost:8080/ProyectoWEBFinal/Restaurante/menu.html">Menú</a></li>
+                            <li><a href="http://localhost:8080/ProyectoWEBFinal/Restaurante/ordenar.html">Ordenar</a></li>
+                            <li><a href="http://localhost:8080/ProyectoWEBFinal/Restaurante/tucuenta.html">Tu cuenta</a></li>
+                            
+                        </ul>
+
+                    </div>
+                </div>
+            </nav>
+
+        </div>
+    </div>
+
+    <div style="min-height: 850px; background-color:#81DAF5">
+           
+            <div id="menu" style="position:absolute; top: 100px;left:0px; bottom:100px; min-height: 120px; background-color:#81DAF5; width:100%; overflow: auto;">
+                <center>
+                <table width="50%"><tr>
+                        <td width="600" >
+                            
+                            <input type=image src="../img/Comida/desayunos4.png" onclick="verDesayuno();"  />
+                        </td>
+                            
+                        <td >
+                            <h2 class="featurette-heading" align="middle">Desayunos</h2>
+                        </td>
+                    </tr></table>
+                    
+                    <hr>
+                <table width="50%"><tr>
+                    <td>
+                        <h2 class="featurette-heading" align="middle">Comidas</h2>
+                     </td>
+                        <td width="600" >
+                            <input type=image  src="../img/Comida/134218877.png" onclick="verComida();"/>
+                        </td>
+
+                    </tr></table>
+                </center>
+            </div>    
+        
+            <div id="Desayuno" style="visibility:hidden;" style="position:absolute; top: 100px;left:0px; bottom:100px; min-height: 120px; background-color:#81DAF5; width:100%; overflow: auto;">
+                <center>
+                <table width="50%"><tr>
+                        <td width="600" >
+                            <input type=image src="../img/Comida/desayunos4.png" onclick="verDesayuno();"  />
+                        </td>
+                            
+                        <td >
+                            <h2 class="featurette-heading" align="middle">Desayunos</h2>
+                        </td>
+                    </tr></table>
+                </center>
+            </div>
+                    <div id="Comida" style="visibility:hidden;" style="position:absolute; top: 100px;left:0px; bottom:100px; min-height: 120px; background-color:#81DAF5; width:100%; overflow: auto;">
+                <center>
+                <table width="50%"><tr>
+                    <td>
+                        <h2 class="featurette-heading" align="middle">Comidas</h2>
+                     </td>
+                        <td width="600" >
+                            <form action="http://localhost:8080/ProyectoWEBFinal/Restaurante/ordenar.html">
+                            <input type=image  src="../img/Comida/134218877.png" /></form>
+                        </td>
+
+                    </tr></table>
+                </center>
+            </div>    
+        </div>    
+    
+
+            
+
+           
+
+            <div style="min-height: 50px; top: 850px">
+            <div class="container marketing" style="bottom:0px;">
+
+                <hr class="featurette-divider">
+
+                <!-- /END THE FEATURETTES -->
+                <!-- FOOTER -->
+                <footer>
+                    <p class="pull-right"><a href="#">Back to top</a></p>
+                    <p>&copy; Jonathan Gracia 2015</p>
+                </footer>
+
+            </div>
+        </div>
+</body>
+
+</html>

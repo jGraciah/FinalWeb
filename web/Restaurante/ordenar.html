@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>ULSA Restaurant</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap.min.css" rel="stylesheet" />
+    <script src="jquery-1.11.3.min.js" type="text/javascript"></script>
+    <script src="mjgn.js" type="text/javascript"></script>  
+<script>
+        function verDesayuno () {
+            document.getElementById("menu").style.visibility="hidden";
+            document.getElementById("desayunos").style.visibility="visible";
+            document.getElementById("comidas").style.visibility="hidden";
+        }
+        function verComida () {
+            document.getElementById("menu").style.visibility="hidden";
+            document.getElementById("desayunos").style.visibility="hidden";
+            document.getElementById("comidas").style.visibility="visible";
+        }
+    </script></head>
+
+
+<body >
+
+    <!-- NAVBAR
+    ================================================== -->
+    <style>
+        /* use navbar-wrapper to wrap navigation bar, the purpose is to overlay navigation bar above slider */
+        .navbar-wrapper {
+            position: absolute;
+            top: 20px;
+            left: 0;
+            width: 100%;
+            height: 60px;
+        }
+        .navbar-wrapper > .container {
+            padding: 0;
+        }
+
+        @media all and (max-width: 768px ){
+            .navbar-wrapper {
+                position: relative;
+                top: 0px;
+            }
+        }
+
+    </style>
+    <div class="navbar-wrapper">
+        <div class="container">
+
+            <nav class="navbar navbar-inverse navbar-static-top" role="navigation" style="margin-bottom: 0px;">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="http://localhost:8080/ProyectoWEBFinal/Restaurante/index.html">ULSA Restaurant</a>
+                    </div>
+                    <div id="navbar" class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav">
+                            <li><a href="http://localhost:8080/ProyectoWEBFinal/Restaurante/menu.html">Menú</a></li>
+                            <li><a href="http://localhost:8080/ProyectoWEBFinal/Restaurante/ordenar.html">Ordenar</a></li>
+                            <li><a href="http://localhost:8080/ProyectoWEBFinal/Restaurante/tucuenta.html">Tu cuenta</a></li>
+                            
+                        </ul>
+
+                    </div>
+                </div>
+            </nav>
+
+        </div>
+    </div>
+
+        <div style="min-height: 850px; background-color:#81DAF5">
+            
+            <div id="menu" style="visibility:visible;" style="position:absolute; top: 100px;left:0px; bottom:100px; min-height: 120px; background-color:#81DAF5; width:100%; overflow: auto;">
+                <center>
+                <table width="50%"><tr>
+                        <td width="600" >
+                            
+                            <input type=image src="../img/Comida/desayunos4.png" onclick="verDesayuno();"  />
+                        </td>
+                            
+                        <td >
+                            <h2 class="featurette-heading" align="middle">Desayunos</h2>
+                        </td>
+                    </tr></table>
+                    
+                    <hr>
+                <table width="50%"><tr>
+                    <td>
+                        <h2 class="featurette-heading" align="middle">Comidas</h2>
+                     </td>
+                        <td width="600" >
+                            <input type=image  src="../img/Comida/134218877.png" onclick="verComida();"/>
+                        </td>
+
+                    </tr></table>
+                </center>
+            </div>    
+            
+            <div id="desayunos" style="visibility:hidden;" style="position:absolute; top: 100px;left:0px; bottom:100px; min-height: 120px; background-color:#81DAF5; width:100%; overflow: auto;">
+                <center>
+                    <hr>
+                <table width="50%"><tr>
+                    <td>
+                        <h2 class="featurette-heading" align="middle">Desayunos</h2>
+                        
+                     </td>
+                    </tr>
+                    <tr>
+        <div id="contenido">
+                        <form name="miForm" method="get" id="miForm">
+                            Desayunos
+                            <br>
+                            Paquete1:
+                            <input type="checkbox" name="paquete1" id="paq1" value="true">
+                            <br>
+                            Paquete2:
+                            <input type="checkbox" name="paquete2" id="paq2" value="true">
+                            <br>
+                            Paquete3:
+                            <input type="checkbox" name="paquete2" id="paq3" value="true">
+                            <br>
+                            <br>
+                            Nombre:<input type="textfield" name="nombre" id="nom">
+                            <br>
+                            <br>
+                           
+                            <input type="button" value="Enviar" onclick="cargaSimple('resultado','otro.jsp','miForm')">  
+                            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                             <input type="textfield" name="tipo" value="1">
+                        </form>
+        </div>
+
+                    </tr>
+                </table>
+                </center>
+            </div>
+            
+            <div id="comidas" style="visibility:hidden;" style="position:absolute; top: 100px;left:0px; bottom:100px; min-height: 120px; background-color:#81DAF5; width:100%; overflow: auto;">
+                <center>
+                    <hr>
+                <table width="50%"><tr>
+                    <td>
+                        <h2 class="featurette-heading" align="middle">Comidas</h2>
+                        
+                     </td>
+                    </tr>
+                    <tr>
+        <div id="contenido">
+                        <form name="miForm" method="get" id="miForm">
+                            Comidas
+                            <br>
+                            Paquete1:
+                            <input type="checkbox" name="paquete1" id="paq11" value="true">
+                            $10
+                            <br>
+                            Paquete2:
+                            <input type="checkbox" name="paquete2" id="paq22" value="true">
+                            $20
+                            <br>
+                            Paquete3:
+                            <input type="checkbox" name="paquete2" id="paq33" value="true">
+                            $30
+                            <br>
+                            <br>
+                            Nombre:<input type="textfield" name="nombre" id="nom">
+                            <br>
+                            <br>
+                            
+                            <input type="button" value="Enviar" onclick="cargaSimple('resultado','otro.jsp','miForm')">   
+                            
+                            
+                            <br>
+                            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                            <input type="textfield" name="tipo" value="2">
+                        </form>
+        </div>
+
+                    </tr>
+                </table>
+                </center>
+            </div>
+        </div>
+
+        <div style="min-height: 50px; top: 850px">
+            <div class="container marketing" style="bottom:0px;">
+
+                <hr class="featurette-divider">
+
+                <!-- /END THE FEATURETTES -->
+                <!-- FOOTER -->
+                <footer>
+                    <p class="pull-right"><a href="#">Back to top</a></p>
+                    <p>&copy; Jonathan Gracia 2015</p>
+                </footer>
+
+            </div>
+        </div>
+</body>
+
+</html>
